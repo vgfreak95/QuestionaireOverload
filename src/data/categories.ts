@@ -72,7 +72,7 @@ export const categories: Category[] = [
         },
         options: ['Not at all', 'Several days', 'More than half the days', 'Nearly every day'],
         summary:
-          'A score of ≥10 is the most commonly used cutoff indicating: Probable Generalized Anxiety Disorder; Severity Cutoff Scores (Most Important Part) The total score is interpreted using standard severity ranges: Total Score	Anxiety Severity 0–4	Minimal anxiety 5–9	Mild anxiety 10–14	Moderate anxiety 15–21	Severe anxiety',
+          '7-item self-report screening tool used to: Identify probable Generalized Anxiety Disorder (GAD); Measure severity of anxiety symptoms; Monitor symptom change over time',
         questions: [
           {
             id: 'q1',
