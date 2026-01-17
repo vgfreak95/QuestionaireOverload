@@ -34,6 +34,55 @@ const assessmentStore = useAssessmentStore()
 const router = useRouter()
 const questionRefs = ref<Record<string, InstanceType<typeof QuestionBoxType> | null>>({})
 
+import { onMounted, onUnmounted } from 'vue'
+
+function handleKeydown(e: KeyboardEvent) {
+  if (e.key.toLowerCase() === 'x') {
+    autoFillAssessment()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeydown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeydown)
+})
+
+function autoFillAssessment() {
+  console.log('Auto filling assessment')
+  const assessment = assessmentStore.currentAssessment
+  if (!assessment) return
+
+  for (const question of assessment.questions) {
+    const answer = randomAnswerForQuestion(question, assessment)
+    console.log(answer)
+    if (answer !== null) {
+      assessmentStore.saveAnswer(question.id, answer)
+    }
+  }
+}
+
+function randomAnswerForQuestion(question: any, assessment: any) {
+  // Question-level options override assessment-level options
+  if ('options' in question && question.options?.length) {
+    return Math.floor(Math.random() * question.options.length)
+  }
+
+  if (assessment.options?.length) {
+    return Math.floor(Math.random() * assessment.options.length)
+  }
+
+  // Slider question
+  if ('scale' in question) {
+    const { min, max } = question.scale
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
+
+  return null
+}
+
 const nextButtonText = computed(() => {
   return assessmentStore.currentIndex === assessmentStore.queue.length - 1 ? 'Finish' : 'Next'
 })

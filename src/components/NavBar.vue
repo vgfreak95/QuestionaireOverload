@@ -16,7 +16,11 @@
 
       <!-- Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto"></ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <RouterLink class="nav-link" to="/scores" active-class="active"> Scores </RouterLink>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
