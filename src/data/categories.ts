@@ -347,7 +347,7 @@ export const categories: Category[] = [
           },
           {
             id: 'q5',
-            text: 'Over the last 2 weeks, how often have you been bothered by: Feeling bad about yourself — or that you are a failure or have let yourself or your family down',
+            text: 'Over the last 2 weeks, how often have you been bothered by: Poor appetite or overeating',
             type: 'multiple-choice',
           },
           {
@@ -539,7 +539,7 @@ export const categories: Category[] = [
           },
           {
             id: 'q4',
-            text: 'Answer this question based on how often do you experience this in your daily life when you are not under the influence of drugs or alcohol? Choose the answer that shows what percentage of the time you have the experience: Some people have the experience of finding themselves dressed in clothes that they don’t remember putting on.',
+            text: 'Answer this question based on how often do you experience this in your daily life when you are not under the influence of drugs or alcohol? Choose the answer that shows what percentage of the time you have the experience: Some people have the experience of driving or riding in a car or bus or subway and suddenly realizing that they don’t remember what has happened during all or part of the trip',
             type: 'slider',
             scale: { min: 0, max: 100 },
             breakpoints: 10,
