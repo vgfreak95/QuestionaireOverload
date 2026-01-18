@@ -33,7 +33,7 @@ function getCategoryName(assessmentId: string) {
 function startAssessments() {
   // Shuffle the current list of assessments
   const currentAssessmentQueue = assessmentStore.queue
-  // assessmentStore.randomizeQueue(currentAssessmentQueue)
+  assessmentStore.randomizeQueue(currentAssessmentQueue)
 
   // Swap to the quiz view
   router.push({ name: 'quiz' })
