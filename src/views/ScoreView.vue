@@ -9,7 +9,7 @@
           <th>Assessment</th>
           <th>Score Explanation</th>
           <th>Score Evaluation</th>
-          <th class="text-end">Score</th>
+          <th>Score</th>
         </tr>
       </thead>
 
@@ -19,7 +19,7 @@
           <td>{{ row.name }}</td>
           <td>{{ row.scoreExplanation }}</td>
           <td>{{ row.scoreEvaluation }}</td>
-          <td class="text-end fw-bold">{{ row.score }}</td>
+          <td class="fw-bold">{{ row.score }}</td>
         </tr>
       </tbody>
     </table>

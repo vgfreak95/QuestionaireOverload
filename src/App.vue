@@ -5,7 +5,7 @@ import NavBar from './components/NavBar.vue'
 
 <template>
   <header>
-    <NavBar websiteTitle="Kaitlyns Krazy Questionaire"></NavBar>
+    <NavBar websiteTitle="Kaitlyn's Krazy Questionnaire"></NavBar>
   </header>
 
   <RouterView />

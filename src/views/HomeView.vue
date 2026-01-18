@@ -7,7 +7,7 @@ import CategoryList from '../components/CategoryList.vue'
 
   <body>
     <h1>Are you ready to get diagnosed?</h1>
-    <h3>To get started, start by selecting the categories on the list below.</h3>
+    <h3>To get started, select one or more of the categories in the list below.</h3>
     <CategoryList></CategoryList>
   </body>
 </template>
